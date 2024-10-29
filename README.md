@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## [FE] Onboarding
 
-## Getting Started
-
-First, run the development server:
+### 실행 방법
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## commit convention
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- feat : 새로운 기능 추가
+- chore : 간단한 수정
+- style : 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우
+- fix : 버그 수정
+- refactor : 코드 리펙토링
 
-## Learn More
+## git branch 전략
 
-To learn more about Next.js, take a look at the following resources:
+- production: 운영 브랜치
+- develop: 개발 브랜치
+- feature: 작업 브랜치
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### branch 작명 방법
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+feature/bod-1 // Jira 이슈 넘버
+```
 
-## Deploy on Vercel
+### PR 요청 방법
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+feature 브랜치로 github에 push 한 뒤, 해당 브랜치에서 develop 브랜치로 아래 양식에 맞게 PR 요청
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+# PR 요청 양식
+
+제목: [BOD-1] 작업 내용 요약
+
+내용
+
+## PR 유형
+
+- [x] 기능 추가
+- [ ] 버그 수정
+- [ ] 스타일 수정
+- [ ] 리팩터링
+
+## 이슈 링크
+
+https://~ (지라 작업 링크)
+
+## 수정 사항
+
+- 버튼 컴포넌트 기능 구현
+
+## 기타
+
+- 기타 등등..
+```
