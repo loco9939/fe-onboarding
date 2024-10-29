@@ -14,8 +14,41 @@
   }
 }
 
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  word-break: keep-all;
+}
+
+button,
+input,
+select,
+textarea {
+  border: none;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+:lang(ko) {
+  h1,
+  h2,
+  h3 {
+    word-break: keep-all;
+  }
 }
